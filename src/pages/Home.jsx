@@ -1,9 +1,14 @@
 import React from 'react';
+import Delete from './Delete';
+import RegisterDonor from './RegisterDonor';
+import Update from './Update';
 
 const Home = () => {
     return (
         <div>
-            this is home page
+            <RegisterDonor/>
+            <Update/>
+            <Delete/>
         </div>
     );
 };

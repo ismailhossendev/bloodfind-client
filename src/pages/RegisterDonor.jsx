@@ -17,7 +17,7 @@ const RegisterDonor = () => {
             return
         }
         const info = { name, email, phone, WhatsApp, district, area, bloodGroup, lastDonate };
-        fetch('http://localhost:5000/donor/register', {
+        fetch('https://bloodfind-server.vercel.app/donor/register', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -26,7 +26,7 @@ const RegisterDonor = () => {
         })
             .then(res => res.json())
             .then(data => {
-                alert(data.name + "Thanks For Register")
+                alert(data.message)
             })
     }
     return (
@@ -46,7 +46,7 @@ const RegisterDonor = () => {
                     <div className="md:flex justify-around gap-2">
                         <div className='w-full'>
                             <label htmlFor="phone" className="block mb-2 text-sm">Phone Number* (Need for Update Donation Time)</label>
-                            <input type="number" name="phone" id="phone" placeholder="john Sumit" className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" required />
+                            <input type="number" name="phone" id="phone" placeholder="0177**44**55**" className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" required />
                         </div>
                         <div className='w-full'>
                             <label htmlFor="WhatsApp" className="block mb-2 text-sm">WhatsApp</label>
