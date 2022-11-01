@@ -10,7 +10,7 @@ const Delete = () => {
         const agree = window.confirm('are you sure?')
         if(!agree)return
 
-        fetch(`https://bloodfind-server.vercel.app/delete/${id}/${phone}`,{
+        fetch(`http://bloodfind-server.vercel.app/delete/${id}/${phone}`,{
             method:'delete',
         })
         .then(res => res.json())
